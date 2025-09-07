@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Flipper</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.5s;
+      }
+      button {
+        font-size: 1.2rem;
+        margin: 10px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Color Flipper</h1>
+
+    <div>
+      <button onclick="flipColor('yellow')" style="background-color: yellow;">Yellow</button>
+      <button onclick="flipColor('blue')" style="background-color: blue;">Blue</button>
+      <button onclick="flipColor('red')" style="background-color: red;">Red</button>
+      <button onclick="flipColor('random')">Random</button>
+    </div>
+  </body>
+  <script>
+    function flipColor(color) {
+      if (color === "random") color = getRandomColor();
+      document.body.style.backgroundColor = color;
+    }
+
+    function getRandomColor() {
+      const hue = Math.floor(Math.random() * 361); // Random angle on the color wheel
+
+      // Keep saturation and lightness high for a bright color
+      return `hsl(${hue}, 80%, 60%)`;
+    }
+  </script>
+</html>
