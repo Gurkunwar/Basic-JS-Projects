@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome Checker</title>
+  </head>
+  <body>
+    <h2>Palindrome Checker</h2>
+    <input type="text" id="string" placeholder="Type something" />
+    <button type="button" onclick="checkPal()">Check</button>
+  </body>
+
+  <script>
+    let string = document.getElementById("string").value;
+
+    function checkPal() {
+      let str = string.split("").reverse().join("");
+      if (str === string) alert("This is a palindrome");
+      else alert("Not a palindrome");
+    }
+  </script>
+</html>
