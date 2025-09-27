@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poppins&family=Space+Grotesk:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Amatic SC", sans-serif;
+  background-color: rgb(234, 234, 210);
+}
+
+header {
+  font-size: 100px;
+  font-weight: 700;
+  padding-top: 20px;
+}
+
+button {
+  font-family: inherit;
+}
+
+.main {
+  margin: 50px 450px 100px 450px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(208, 208, 190);
+  border-radius: 10px;
+}
+
+.addTodo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addTodo h4 {
+  display: inline-block;
+  font-size: 30px;
+}
+
+.addTodo input {
+  height: 25px;
+  width: 300px;
+  font-family: inherit;
+  border-radius: 10px;
+  font-size: 25px;
+  padding: 5px;
+  margin: 0 5px 0 5px;
+}
+
+.addTodo button {
+  background-color: rgb(169, 169, 155);
+  border: 1px solid;
+  border-radius: 5px;
+  height: 30px;
+  width: 50px;
+  font-size: 20px;
+}
+
+.todos {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(181, 181, 166);
+  border-radius: 10px;
+  padding: 0 5px 0 5px;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.todos .todo {
+  display: flex;
+  align-items: center;
+  width: 85%;
+}
+
+.todo input{
+    width: 20px;
+    height: 20px;
+}
+
+.todo p {
+  margin-left: 10px;
+}
+
+.btns button {
+  width: 50px;
+  height: 30px;
+  font-size: 20px;
+}
