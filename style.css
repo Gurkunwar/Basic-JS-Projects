@@ -21,8 +21,9 @@ button {
 }
 
 .main {
-  margin: 50px 450px 100px 450px;
-  height: 80vh;
+  margin: 100px 500px 100px 500px;
+  height: 60vh;
+  max-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,10 +76,10 @@ button {
 .todos .todo {
   display: flex;
   align-items: center;
-  width: 85%;
+  width: 80%;
 }
 
-.todo input{
+.todo .check{
     width: 20px;
     height: 20px;
 }
@@ -91,4 +92,15 @@ button {
   width: 50px;
   height: 30px;
   font-size: 20px;
+}
+
+.completed{
+    text-decoration: line-through;
+}
+
+.edit-input{
+    margin: 20px;
+    width: 80%;
+    font-size: 25px;
+    font-family: inherit;
 }
