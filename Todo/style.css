@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poppins&family=Space+Grotesk:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
-  height: 100%;
-  width: 100%;
   padding: 0;
   margin: 0;
   font-family: "Amatic SC", sans-serif;
@@ -18,17 +20,19 @@ header {
 
 button {
   font-family: inherit;
+  cursor: pointer;
 }
 
 .main {
-  margin: 100px 500px 100px 500px;
-  height: 60vh;
+  margin: 100px auto;
+  max-width: 900px;
   max-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgb(208, 208, 190);
   border-radius: 10px;
+  padding-bottom: 20px;
 }
 
 .addTodo {
@@ -43,7 +47,7 @@ button {
 }
 
 .addTodo input {
-  height: 25px;
+  height: 40px;
   width: 300px;
   font-family: inherit;
   border-radius: 10px;
@@ -56,51 +60,97 @@ button {
   background-color: rgb(169, 169, 155);
   border: 1px solid;
   border-radius: 5px;
-  height: 30px;
+  height: 35px;
   width: 50px;
   font-size: 20px;
 }
 
+.todo-list {
+  width: 85%;
+  max-height: 55%;
+  overflow-y: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(185, 185, 171);
+  padding-top: 10px;
+}
+
 .todos {
-  width: 90%;
+  width: 95%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(181, 181, 166);
+  background-color: rgb(162, 162, 149);
   border-radius: 10px;
   padding: 0 5px 0 5px;
   font-size: 25px;
   margin-bottom: 10px;
+  transition: all 0.4s ease;
 }
 
 .todos .todo {
+  position: relative;
   display: flex;
   align-items: center;
   width: 80%;
 }
 
-.todo .check{
-    width: 20px;
-    height: 20px;
+.todo .check {
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 
-.todo p {
-  margin-left: 10px;
+.todo .todoText::before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  border: 2px solid #555;
+  border-radius: 50%;
+  margin-right: 15px;
+  transition: all 0.5 ease;
+  margin-left: 3px;
+}
+
+.todo .check:checked + .todoText::before {
+  background-color: #555;
+  border-color: #555;
+}
+
+.todo label {
+  padding: 15px 0 15px 0;
 }
 
 .btns button {
   width: 50px;
   height: 30px;
   font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid;
 }
 
-.completed{
-    text-decoration: line-through;
+.completed {
+  text-decoration: line-through;
 }
 
-.edit-input{
-    margin: 20px;
-    width: 80%;
-    font-size: 25px;
-    font-family: inherit;
+.edit-todo {
+  margin-right: 5px;
+}
+
+.edit-input {
+    height: 30px;
+    margin: 20px 0 20px 0;
+    font: inherit;
+}
+
+.new-item{
+    opacity: 0;
+    transform: translateY(-20px);
 }
